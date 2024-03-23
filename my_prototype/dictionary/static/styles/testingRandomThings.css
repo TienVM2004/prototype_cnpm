@@ -1,0 +1,93 @@
+/* background image */
+body {
+    background-color: #EAE5E1;
+    overflow-x: hidden;
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100%;
+}
+
+/* cute dog at the bottom */
+.fixed-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+/* change column color when hovered */
+.column-settings:hover {
+    background-color: rgba(200, 232, 253, 0.5);
+    z-index: 999;
+    border-radius: 10%;
+}
+
+/* change column color when clicked */
+.column-settings:active {
+  background-color: rgba(175, 224, 255, 0.5);
+  z-index: 999;
+  border-radius: 10%;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+}
+
+/* setting for all 3 columns */
+.column-settings {
+  background-color: rgba(226, 244, 255, 0.5);
+  z-index: 999;
+  border-radius: 10%;
+  box-shadow: 10px 10px 10px 7px rgba(0,0,0,0.1);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.column-settings img {
+  width: 40vh;
+}
+
+.welcome-text {
+    padding-top: 5vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* add this class to anything you want to appear on the top */
+.front-layer {
+    z-index: 9999;
+}
+
+/* animation for the dog */
+@keyframes move-left-right {
+    0% { 
+      left: 0; 
+    }
+    50% { 
+      left: 92%; 
+      transform: scaleX(1);
+    }
+    55% {
+      transform: scaleX(-1);
+    }
+    90% {
+      transform: scaleX(-1);
+    }
+    100% { 
+      left: 0; 
+    }
+  }
+  
+  .moving-image {
+    animation: move-left-right 40s infinite;
+  }
+  
+/* This is for aligning elements in the navbat */
+.navbar-brand {
+  padding-bottom: 0rem;
+}
+
+.logo-image {
+  width: auto;
+  height: 5vh;
+}
+.dog-image {
+  width: auto;
+  height: 15vh;
+}
