@@ -75,14 +75,26 @@
     </a>
     
     <!-- Welcome text - Currently left blank -->
-    <div class="welcome-text text-left" >
-    </div>
+    {% comment %} <div class="welcome-text text-left" >
+    </div> {% endcomment %}
 
+
+    <div class="welcome-text-outer">
+      <!-- 
+        Column 3
+       -->
+        <div class="p-3 welcome-settings welcome-text-outer" >
+
+          <h1 class="text-center welcome-text">ANGLaiS</h1>
+          <p class="text-center sub-welcome-text"> Free language learning service </p>
+        </div>
+    </div>
     <!-- 
       3 Columns for 3 functionalities
      -->
-    <div class="row justify-content-between px-5">
-      <div class="col-sm mx-auto">
+    
+    <div class="row justify-content-between px-5 outer_column">
+      <div class="col-sm mx-auto screen_side_separator">
         <!-- 
           Column 1
          -->
@@ -93,7 +105,7 @@
           <p class="text-center">One of three columns</p>
         </div>
       </div>
-      <div class="col-sm mx-auto">
+      <div class="col-sm mx-auto screen_side_separator">
         <!-- 
           Column 2
          -->
@@ -102,18 +114,32 @@
           <p class="text-center">One of three columns</p>
         </div>
       </div>
-      <div class="col-sm mx-auto" >
+      <div class="col-sm mx-auto screen_side_separator" >
         <!-- 
           Column 3
          -->
-        <div class="p-3 column-settings" >
-          <img src="{% static 'images\logo.png' %}" class="rounded img-fluid rounded mx-auto d-block" alt="Responsive image"  >
-          <a class="text-center" href = "{% url 'dictionary:view_1' %}" >One of three columns</a>
-        </div>
+        <a class="text-center overall_div no-underline" href = "{% url 'dictionary:view_1' %}" >
+          <div class="p-3 column-settings" >
+            <img src="{% static 'images\logo.png' %}" class="rounded img-fluid rounded mx-auto d-block" alt="Responsive image"  >
+            <p class="text-center">One of three columns</p>
+          </div>
+        </a>
       </div>
+      
     </div>
 
+    <!-- 
+      Column 3
+      -->
+      <div class="p-3 end-settings" >
 
+        <h1 class="end-text">Contact us</h1>
+        <p class="sub-end-text">facebook: Dumamay</p>
+        <p class="sub-end-text">Instagram: Cailonma</p>
+        <p class="sub-end-text">Youtube: TonLien</p>
+        <p class="sub-end-text">contactcailonay</p>
+      </div>
+    
     
 
     
